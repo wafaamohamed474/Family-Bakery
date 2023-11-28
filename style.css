@@ -1,0 +1,502 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:"Alegreya Sans";
+}
+
+:root{
+    --main-color:#8e7754;
+    --p-color:#686868;
+    --black-color:#303030;
+}
+.fixed{
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    right: -5px;
+    top: 30%;
+    position: fixed;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 8px 8px 20px rgba(128, 128, 128, 0.329);
+    z-index: 2;
+}
+.fixed i{
+    margin: 10px;
+    font-size: 20px;
+    color: #403d38;
+    transition: all .5s;
+}
+.fixed:hover i{
+    color: rgb(52, 164, 234);
+    transform: scale(1.2);
+}
+.parent1{
+    height: 100vh;
+    background-image: url(./imges/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.nav{
+    height: 10%;
+    width: 100%;
+    display:flex;
+    background-color:transparent;
+    position:fixed;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 3;
+    background-color:#fff;
+    box-shadow: 0 5px 10px  #5d595940;
+}
+.nav i{
+    position: absolute;
+    right: 5%;
+    font-size: 23px;
+    color: var(--main-color);
+    display: none;
+}
+.nav img{
+    width: 170px;
+    margin-left: 50px;
+}
+.links ul{
+    display: flex;
+    margin-right: 50px;
+}
+.links ul li{
+    list-style: none;
+    margin-left: 20px ;
+    font-size: 20px;
+    text-transform: capitalize;   
+}
+.links ul a{
+    text-decoration: none;
+    color:var(--main-color);
+    transition: all .5s;
+}
+.links ul li a:hover{
+    color:var(--black-color);
+}
+
+.main-head{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 60%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.main-head h3{
+    color: #fff;
+    font-size: 20px;
+}
+.main-head .main-title{
+    color: #fff;
+    font-size: 70px;
+    font-family: "Alegreya";
+    margin: 10px 0;
+}
+.main-head .main-p{
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    line-height: 50px;
+     
+}
+.main-head .main-btn a{
+    text-decoration: none;
+}
+
+.main-head .main-btn .btn{
+    border:1px solid #fff;
+    border-radius: 3px;
+    padding: 20px 30px;
+    margin: 10px;
+    font-size: 16px;
+    text-transform: capitalize;
+    background-color: transparent;
+    transition: all .5s;
+    color: #fff;
+    font-weight: bold;
+}
+.main-head .main-btn .btn:hover{
+    background-color: #fff;
+    color: black;
+}
+.main-head .main-btn .learn-more{
+    background-color: var(--main-color);
+    border: none;
+}
+.click{
+    position: absolute;
+    width: 35px;
+    height: 50px;
+    bottom: -20%;
+    border: 2px solid #a8a6a6f1;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+     
+}
+.click .c{
+    width: 10px;
+    height: 10px;
+    background-color:#fff;
+    position: absolute;
+    left: 33%;
+    top: 30%;
+    border-radius: 50%;
+    animation-name: click;
+    animation-duration: 2s;
+    animation-delay: 1.5s;
+    animation-iteration-count:infinite;
+    animation-timing-function:ease;
+    animation-direction:normal;
+}
+@keyframes click{
+    0%{
+        transform: translateY(-100%);
+    }
+
+    100%{
+        transform: translateY(80%);
+        opacity: 0;
+    }
+     
+}
+/* ================================================= */
+.parent2{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(400px,auto));
+    padding: 50px;
+}
+.parent2 .parent2-img img{
+    width: 100%;
+    padding-right: 10%;
+}
+.who-we-are{
+    display: grid;
+    grid-template-rows:80px 150px ;
+}
+.who-we-are h1::first-letter{
+    text-transform: capitalize;
+}
+.who-we-are h1{
+    font-family: "Alegreya";
+    color: var(--black-color);
+}
+.who-we-are p{
+    color: var(--p-color);
+    line-height: 30px;
+    font-size: 18px;
+}
+.who-we-are .content{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+.who-we-are .content .content-line{
+    display: flex;
+}
+.who-we-are .content .content-line .content-icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    border: 1px solid var(--p-color) ;
+    position: relative;
+}
+.who-we-are .content .content-line .content-icon i{
+    color:var(--main-color);
+    font-size: 20px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+ 
+}
+/* ======================================================== */
+.parent3{
+    display: grid;
+    padding: 70px;
+    grid-template-columns:repeat(auto-fill,minmax(400px,auto));
+    background-color: #f8f8f8;
+}
+.parent3 .left{
+    padding-top: 50px;
+    display: grid;
+    grid-template-rows: 50px 150px 100px;
+    margin-right: 50px;
+}
+.parent3 .left .left-title{
+    text-transform: capitalize;
+    font-family: "Alegreya";
+    font-size: 32px;
+    color: var(--black-color);
+}
+.parent3 .left p{
+    line-height: 30px;
+    color:var(--p-color);
+}
+.parent3 .right img{
+    width: 100%;
+}
+/* ========================================================= */
+.parent4{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    
+}
+.parent4 .parent4-title{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    font-family: "Alegreya";
+    font-size: 30px;
+    color: var(--black-color);
+}
+.parent4 .parent4-p{
+    color: var(--p-color);
+    margin-bottom: 50px;
+}
+.parent4 .container-cards{
+    display: grid;
+    grid-template-columns:repeat(auto-fill,minmax(300px,auto));
+}
+.parent4 .container-cards .card{
+    margin: 20px;
+    text-align: center;
+}
+.parent4 .container-cards .card img{
+    width: 100%;
+}
+.parent4 .container-cards .card .card-title{
+    text-transform: capitalize;
+    font-family: "Alegreya";
+    font-size: 22px;
+    padding: 20px 0;
+    color: var(--black-color);
+}
+.parent4 .container-cards .card p{
+    color: var(--p-color);
+    line-height: 30px;
+}
+/* ====================================================== */
+
+.parent5{
+    display: grid;
+    grid-template-columns:  repeat(auto-fill,minmax(400px,auto));
+    padding: 50px;
+    background-color: #f8f8f8;
+}
+.parent5 .contact{
+    display: grid;
+    grid-template-rows:80px 120px 80px ;
+    margin-right: 50px;
+}
+.parent5 .contact .contact-title{
+    font-family: "Alegreya";
+    color: var(--black-color);
+    text-transform: capitalize;
+    font-size: 30px;
+}
+.parent5 .contact p::first-letter{
+    text-transform: capitalize;
+}
+.parent5 .contact p{
+    color: var(--p-color);
+    line-height: 30px;
+    font-size: 18px;
+}
+.parent5 .contact-method{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+.parent5 .contact-method .contact-line{
+    display: flex;
+}
+.parent5 .contact-method .contact-line .contact-icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 30px;
+    margin-bottom: 15px;
+    border: 1px solid var(--p-color) ;
+    position: relative;
+    background-color: var(--main-color);
+}
+.parent5 .contact-method .contact-line .contact-icon i{
+    color:#fff;
+    font-size: 18px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.parent5 .map{
+    width: 90%;
+    height: 100%;
+    margin-left: 40px;
+}
+.parent5 .map iframe{
+    width: 100%;
+    height: 100%;
+}
+/* ========================================================= */
+
+.parent6{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,auto));
+    padding: 50px;
+    background-color: #403d38;
+}
+.parent6 .div6{
+    margin: 20px;
+    
+}
+.parent6 .div-title::first-letter{
+    text-transform: capitalize;
+}
+.parent6 .div-title{
+    margin-bottom: 30px;
+    font-size: 25px;
+    font-family: "Alegreya";
+    color: #fff;
+}
+.parent6 p{
+    color: #969696;
+}
+.parent6 .about-us p{
+    margin-bottom: 20px;
+    line-height: 30px;
+}
+.parent6 ul li{
+    list-style-type:">   ";
+    color: #969696;
+    margin: 15px 0;
+}
+.parent6 hr{
+    color: #969696;
+    opacity: 0.1;
+}
+.parent6 .details-line{
+    display: flex;
+    margin: 15px 0;
+}
+.parent6 .details-line i{
+    margin-right: 15px;
+    color: #969696;
+}
+/* ===================================================== */
+.parent7{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #353330;
+    padding: 50px 0;
+    position: relative;
+}
+.parent7 p{
+    color: #969696;
+    margin-top:20px ;
+}
+.parent7 .footer-icons{
+    display: flex;
+    margin-top: 20px;
+}
+.parent7 .footer-icons .icon{
+    width: 40px;
+    height: 40px;
+    background-color: #403d38;
+    margin: 5px;
+    border-radius: 50%;
+    transition: all .5s;
+}
+.parent7 .footer-icons .icon:hover{
+    background-color:rgb(52, 164, 234);
+}
+.parent7 .footer-icons .icon:hover i{
+    color: #fff;
+}
+.parent7 .footer-icons .icon i{
+    color: #969696;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+/* ============================================ */
+body::after{
+    content: "<";
+    font-size: 25px;
+    font-weight: 900;
+    transform: rotate(90deg);
+    color: #969696;;
+    width: 40px;
+    height: 40px;
+    bottom: 15px;
+    right: 15px;
+    background-color: var(--black-color);
+    position: fixed;
+    border-radius: 50%;
+    border: 2px solid #969696;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s;
+}
+@media (max-width:768px){
+    .parent1{
+        position: relative;
+        height: 80vh;
+    }
+    .nav i{
+        display: block;
+    }
+    .links ul li{
+        display: none;
+    }
+    .click{
+        bottom: -13%;
+    }
+    .parent1 .main-head{
+        width: 50%;
+        text-align: center;
+    }
+    .main-head .main-p{
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .main-head .main-title{
+        font-size: 50px;
+    }
+    .parent2{
+        padding: 30px;
+    }
+    .parent3{
+        padding: 15px;
+    }
+    .parent3 .left{
+        margin-right: 0;
+    }
+    .parent5 .map{
+        margin-left: 0;
+        height: 300px;
+    }
+}
